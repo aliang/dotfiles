@@ -1,4 +1,5 @@
 # shamelessly stolen from http://objectliteral.blogspot.com/2009/09/example-screenrc-file.html
+defshell -bash
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 vbell off
