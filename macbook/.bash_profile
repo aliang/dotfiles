@@ -3,17 +3,20 @@ export EDITOR=nano
 
 ### Prompt + date + git
 
+GIT_COMPLETION=/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 # Only source if the file exists
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+if [ -f ${GIT_COMPLETION} ]; then
+  . ${GIT_COMPLETION}
 fi
 
 DEFAULT_PS1='\[\e[2m\][\D{%m-%d %T}]\[\e[0m\] \u@\h:\W'
+GIT_PROMPT=/Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
 # Only prompt if the file exists
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ]; then
-  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+if [ -f ${GIT_PROMPT} ]; then
+  source ${GIT_PROMPT}
 
   GIT_PS1_SHOWDIRTYSTATE="yes"
   GIT_PS1_SHOWUPSTREAM="auto"
